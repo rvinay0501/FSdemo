@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>School Management - Student, Teaching & Non-Teaching Staff</title>
+
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <h1>School Management System</h1>
+
+    
+    <h2>Student Form</h2>
+    <form onsubmit="saveStudent(event)" id="formStudent" class="student-section">
+      <label >Student ID (for Update/Delete):</label><br />
+      <input type="text" id="StudentID" /><br /><br />
+
+      <label>First Name:</label><br />
+      <input type="text" id="StudentFirstName" /><br /><br />
+
+      <label>Last Name:</label><br />
+      <input type="text" id="StudentLastName" /><br /><br />
+
+      <label>Standard:</label><br />
+      <input type="text" id="Standard" /><br /><br />
+
+      <label>Phone Number:</label><br />
+      <input type="text" id="PhoneNumber" /><br /><br />
+
+      <label>Address:</label><br />
+      <textarea id="Address"></textarea><br /><br />
+
+      <button type="submit">Save (POST)</button>
+      <button type="button" onclick="updateStudent()">Update (PUT)</button>
+      <button type="button" onclick="deleteStudent()">Delete (DELETE)</button>
+      <input type="button" value="Get Students (GET)" onclick="getStudents()" />
+    </form>
+
+    <div id="studentTable"></div>
+
+    <hr />
+
+    
+    <h2>Teaching Staff Form</h2>
+    <form onsubmit="saveStaff(event)" id="formStaff">
+      <label>Staff ID (for Update/Delete):</label><br />
+      <input type="text" id="StaffID" /><br /><br />
+
+      <label>First Name:</label><br />
+      <input type="text" id="StaffFirstName" /><br /><br />
+
+      <label>Last Name:</label><br />
+      <input type="text" id="StaffLastName" /><br /><br />
+
+      <label>Qualification:</label><br />
+      <input type="text" id="Qualification" /><br /><br />
+
+      <label>Designation:</label><br />
+      <input type="text" id="Designation" /><br /><br />
+
+      <button type="submit">Save (POST)</button>
+      <button type="button" onclick="updateStaff()">Update (PUT)</button>
+      <button type="button" onclick="deleteStaff()">Delete (DELETE)</button>
+      <input type="button" value="Get Staff (GET)" onclick="getStaff()" />
+    </form>
+
+    <div id="staffTable"></div>
+
+    <hr />
+
+    <!-- ================= NON-TEACHING STAFF SECTION ================= -->
+    <h2>Non-Teaching Staff Form</h2>
+    <form onsubmit="saveNonTeachingStaff(event)" id="formNonTeaching">
+      <label>Staff ID (for Update/Delete):</label><br />
+      <input type="text" id="NTStaffID" /><br /><br />
+
+      <label>First Name:</label><br />
+      <input type="text" id="NTFirstName" /><br /><br />
+
+      <label>Last Name:</label><br />
+      <input type="text" id="NTLastName" /><br /><br />
+
+      <label>Qualification:</label><br />
+      <input type="text" id="NTQualification" /><br /><br />
+
+      <label>Designation:</label><br />
+      <input type="text" id="NTDesignation" /><br /><br />
+
+      <button type="submit">Save (POST)</button>
+      <button type="button" onclick="updateNonTeachingStaff()">Update (PUT)</button>
+      <button type="button" onclick="deleteNonTeachingStaff()">Delete (DELETE)</button>
+      <input
+        type="button"
+        value="Get Non-Teaching Staff (GET)"
+        onclick="getNonTeachingStaff()"
+      />
+    </form>
+
+    <div id="nonTeachingTable"></div>
+<script src="./index.js"></script>
+
+   
+    
+  </body>
+</html>
