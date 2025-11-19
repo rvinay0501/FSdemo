@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <h1>school management system</h1>
+      <h1>School Management System</h1>
       <StudentGet/>
       <StudentSave/>
       <StudentUpdate/>
